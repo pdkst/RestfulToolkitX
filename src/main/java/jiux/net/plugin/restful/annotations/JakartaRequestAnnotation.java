@@ -1,23 +1,20 @@
 package jiux.net.plugin.restful.annotations;
 
-public enum JaxrsRequestAnnotation {
-  /**
-   * Path javax.ws.rs.Path
-   */
-  PATH("Path", "javax.ws.rs.Path", null);
+public enum JakartaRequestAnnotation {
+  PATH("Path", "jakarta.ws.rs.Path", null);
 
   private final String shortName;
   private final String qualifiedName;
   private final String methodName;
 
-  JaxrsRequestAnnotation(String shortName, String qualifiedName, String methodName) {
+  JakartaRequestAnnotation(String shortName, String qualifiedName, String methodName) {
     this.shortName = shortName;
     this.qualifiedName = qualifiedName;
     this.methodName = methodName;
   }
 
-  public static JaxrsRequestAnnotation getByShortName(String shortName) {
-    for (JaxrsRequestAnnotation requestAnnotation : JaxrsRequestAnnotation.values()) {
+  public static JakartaRequestAnnotation getByShortName(String shortName) {
+    for (JakartaRequestAnnotation requestAnnotation : JakartaRequestAnnotation.values()) {
       if (requestAnnotation.getShortName().equals(shortName)) {
         return requestAnnotation;
       }
@@ -25,8 +22,8 @@ public enum JaxrsRequestAnnotation {
     return null;
   }
 
-  public static JaxrsRequestAnnotation getByQualifiedName(String qualifiedName) {
-    for (JaxrsRequestAnnotation requestAnnotation : JaxrsRequestAnnotation.values()) {
+  public static JakartaRequestAnnotation getByQualifiedName(String qualifiedName) {
+    for (JakartaRequestAnnotation requestAnnotation : JakartaRequestAnnotation.values()) {
       if (requestAnnotation.getQualifiedName().equals(qualifiedName)) {
         return requestAnnotation;
       }
